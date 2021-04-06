@@ -1,0 +1,35 @@
+.formCard{
+    background-color: #fefefe;
+    width: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 30px #ccccff;
+}
+
+.userAvatar{
+    margin: auto;
+    background: #1890ff;
+}
+
+.ant-form-item{
+    margin-bottom: 20px;
+}
+
+.ant-picker{
+    width: 100%;
+}
+
+.ant-radio-group{
+    width: 100%;
+}
+
+.ant-radio-wrapper{
+    width: 49%;
+}
+
+button{
+    width: 100%;
+}
