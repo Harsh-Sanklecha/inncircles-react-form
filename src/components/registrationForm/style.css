@@ -8,10 +8,40 @@
     border-radius: 5px;
     box-shadow: 0 0 30px #ccccff;
 }
-
+.content{
+    width: 54px;
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+}
 .userAvatar{
     margin: auto;
     background: #1890ff;
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.userAvatar:hover{
+    opacity: 0.5;
+}
+
+.overlay {
+  transition: .5s ease;
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content:hover .userAvatar {
+    opacity: 0.3;
+}
+
+.content:hover .overlay {
+  opacity: 1;
 }
 
 .ant-form-item{

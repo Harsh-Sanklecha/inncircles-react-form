@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {Form, Input, Button, Radio, DatePicker, Card, Avatar} from 'antd';
-import { MailOutlined , UserOutlined } from '@ant-design/icons';
+import {Form, Input, Button, Radio, DatePicker, Card, Avatar, Upload} from 'antd';
+import { MailOutlined , UserOutlined, CameraOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import './style.css';
 
@@ -29,7 +29,14 @@ const RegistrationForm = () => {
    
     return (
          <Card className="formCard py-3">
+           <div className="content">
             <Avatar size={54} className="userAvatar mb-4 d-flex justify-content-center align-items-center" icon={<UserOutlined />} />
+            <div className="overlay">
+              <Upload>
+                  <CameraOutlined style={{ fontSize: '28px', color: '#08c' }} />
+              </Upload>
+              </div>
+           </div>
             <Form name="nest-messages" form={form} onFinish={onFinish} validateMessages={validateMessages}>
             <Form.Item name={['user', 'name']} rules={[{ required: true, message: 'Full Name is required' }]}>
                 <Input placeholder="Full Name *" className="py-2" prefix={<UserOutlined className="site-form-item-icon pr-2" />} />
